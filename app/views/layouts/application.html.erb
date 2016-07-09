@@ -8,9 +8,7 @@
   </head>
   <body>
     <%=   render "layouts/header.html.erb"%>
-    <%=   render "hotels/carousel.html.erb"%>
-    <%=   render "hotels/list.html.erb"%>
-    <%=   render "layouts/pagination.html.erb"%>
+<%=yield %>
     <%=   render "layouts/footer.html.erb"%>
 <%= javascript_include_tag "salvattore", :media => "all"%>
   </body>
