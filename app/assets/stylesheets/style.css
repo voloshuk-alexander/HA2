@@ -1,0 +1,122 @@
+
+.container{
+     margin-top: 50px;
+
+}
+.hotelslist{
+     margin-top: 10px;
+    
+}
+.hotel p,h1 {
+    text-align: center;
+
+}
+.container-fluid p{
+    height: 100%;
+}
+.container-fluid img{
+    
+    max-height: 100vh;
+    max-width: 100vw;
+    height: auto;
+    width:100%;
+    
+}
+
+.item img  {
+   
+    margin-top: 50px;
+    max-height: 91.9vh;
+    max-width: 100vw;
+    height: auto;
+    width:100%;
+  
+}
+
+@media screen and (max-width: 767px) {
+.masonry[data-columns]::before{
+    content: '1 .col-xs-12';
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+.masonry[data-columns]::before{
+    content: '2 .col-xs-6';
+    }      
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+.masonry[data-columns]::before{
+    content: '3 .col-xs-4';
+    }      
+}
+@media screen and (min-width: 1200px){
+.masonry[data-columns]::before{
+    content: '3 .col-xs-4';
+    }      
+}
+
+
+@media screen and (max-width: 767px) {
+.masonry2[data-columns]::before{
+    content: '1 .col-xs-12';
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+.masonry2[data-columns]::before{
+    content: '2 .col-xs-6';
+    }      
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+.masonry2[data-columns]::before{
+    content: '2 .col-xs-6';
+    }      
+}
+@media screen and (min-width: 1200px){
+.masonry2[data-columns]::before{
+    content: '2 .col-xs-6';
+    }      
+}
+
+.btn-view {
+  color: #2900d8;    
+  background-color: rgba(235, 235, 235, 0.65);
+  
+}
+
+
+.tm{
+    text-align: right;
+}
+
+.stars {
+    text-align: center;
+}
+
+.adress {
+    text-align: center;
+}
+
+.descript {
+    text-align: center;
+}
+.marg{
+    margin-left: 10px;
+    }
+.aligncenter {
+    text-align: center;
+}
+.profile {
+  display: block;
+  width: 200px;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}

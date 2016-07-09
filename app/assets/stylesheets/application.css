@@ -12,4 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *=require bs/bootstrap
+ *=require bs/bootstrap-theme
+ *=require style
+ *= require font-awesome
  */
