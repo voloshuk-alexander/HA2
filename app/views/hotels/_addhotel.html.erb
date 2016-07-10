@@ -1,6 +1,8 @@
 <div class="addhotel">
 <div class="thumbnail">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        <a href="#" class="btn">Подробнее</a>
+  <%= simple_form_for @hotel do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  <% end %>
 </div>
 </div>
