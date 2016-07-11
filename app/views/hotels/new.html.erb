@@ -16,7 +16,7 @@
                  <div class="thumbnail aligncenter">
                      <%= simple_form_for :hotels, url: hotels_path do |f| %>
                      <p>Name:</p><%= f.input :name, label: false %>
-                     <p>Photo:</p><label><input type="file" name="f"></label>
+                     <p>Photo:</p><%= f.file_field :photo %>
                      <p>Price for room:</p><%= f.input :price, label: false %>
                      <p>Adress:</p>
                      <%= f.input :count_name, placeholder: 'Country', label: false %>
