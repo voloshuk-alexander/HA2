@@ -12,6 +12,16 @@
       <%= @hotels.street %>
     </b></p></div>
       </div>
+      <div class="row thumbnail">
+      <div><p>Room price</p><b><%= @hotels.price%></b></div>
+      <div><p><p>Include breakfast</p><b>
+        <% if @hotels.breakfast==true %>
+              <p>Yes</p>
+          <% else %>
+            <p>No</p>
+          <% end %>
+      </b></p></div>
+      </div>
 
 </div>
 

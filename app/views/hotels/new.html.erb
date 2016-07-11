@@ -15,17 +15,21 @@
                  </div>
                  <div class="thumbnail aligncenter">
                      <%= simple_form_for :hotels, url: hotels_path do |f| %>
-                     <p>Name:</p><%= f.input :name, label: false %>
-                     <p>Photo:</p><%= f.file_field :photo %>
-                     <p>Price for room:</p><%= f.input :price, label: false %>
-                     <p>Adress:</p>
+                     <p><b>Name:</b></p><%= f.input :name, label: false %>
+                     <p><b>Photo:</b></p>
+                     <div class="photo_upload">
+                     <%= f.file_field :photo %>
+                     </div>
+                     <p><b>Price for room:</b></p><%= f.input :price, label: false %>
+                     <p><b>Include breakfast:</b></p>
+                     <%= f.input :breakfast,as: :radio_buttons, label: false %>
+                     <p><b>Adress:</b></p>
                      <%= f.input :count_name, placeholder: 'Country', label: false %>
                      <%= f.input :state, placeholder: 'State',label: false %>
                      <%= f.input :city, placeholder: 'City', label: false %>
                      <%= f.input :street, placeholder: 'Street', label: false %>
-                     <p>Description:</p><%= f.input :description, label: false %>
-
-                       <%= f.button :submit, "Add my hotel", class: "btn btn-primary" %>
+                     <p><b>Description:</b></p><%= f.input :description,as: :text, label: false %>
+                     <%= f.button :submit, "Add my hotel", class: "btn btn-primary" %>
                          <% end %>
                  </div>
              </div>
