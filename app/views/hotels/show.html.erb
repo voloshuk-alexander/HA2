@@ -1,18 +1,45 @@
-<div class="addhotel">
-<div class="thumbnail">
-<%= @hotels.id %>
-<img src="<%= @hotels.photo %>" alt="">
+<div class="container">
+<div class="row">
 
-<p>Name</p>
-<%= @hotels.name %>
-<p>Description</p>
-<%= @hotels.description %>
-<p>Price</p>
-<%= @hotels.price %>
-<p>Adress</p>
-<%= @hotels.count_name %>
-<%= @hotels.state %>
-<%= @hotels.city %>
-<%= @hotels.street %>
+
+      <div class="row thumbnail">
+      <div class="HotelName"><h1><%= @hotels.name %></h1></div>
+      <!--ТУТ БЫЛ РЕЦТИНГ-->
+      <div class="adress"><p><b>
+      <%= @hotels.count_name %>
+      <%= @hotels.state %>
+      <%= @hotels.city %>
+      <%= @hotels.street %>
+    </b></p></div>
+      </div>
+
 </div>
+
+
+
+
+<div class="row">
+ <div class="hotview">
+<div class="row">
+ <div class="thumbnail"><img src="<%= @hotels.photo %>"  alt="">
+ </div>
+  <div class="marg thumbnail">
+   <div class="descript"><h3>Описание:</h3><p><%= @hotels.description %></p></div>
+ </div>
+ </div>
+ </div>
+ </div>
+   <div class="row thumbnail">
+<p>Отзывы:</p>
+ </div>
+    <div class="row thumbnail">
+<p>Оставить отзыв:</p>
+<p><textarea name="adress" cols="50" rows="5"> </textarea></p>
+<a href="#" class="btn">Отправить</a>
+ </div>
+
+
+
+
+
 </div>
