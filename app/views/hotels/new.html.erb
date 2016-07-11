@@ -1,2 +1,35 @@
 <% provide(:title, 'Add new hotel') %>
-    <%=   render "hotels/addhotel.html.erb"%>
+<div class="addhotel">
+<div class="thumbnail">
+
+
+
+
+
+
+
+  <div class="container">
+             <div class="row">
+                 <div class="thumbnail aligncenter">
+                     <h1>New Hotel</h1>
+                 </div>
+                 <div class="thumbnail aligncenter">
+                     <%= simple_form_for :hotels, url: hotels_path do |f| %>
+                     <p>Name:</p><%= f.input :name, label: false %>
+                     <p>Photo:</p><label><input type="file" name="f"></label>
+                     <p>Price for room:</p><%= f.input :price, label: false %>
+                     <p>Adress:</p>
+                     <%= f.input :count_name, placeholder: 'Country', label: false %>
+                     <%= f.input :state, placeholder: 'State',label: false %>
+                     <%= f.input :city, placeholder: 'City', label: false %>
+                     <%= f.input :street, placeholder: 'Street', label: false %>
+                     <p>Description:</p><%= f.input :description, label: false %>
+
+                       <%= f.button :submit, "Add my hotel", class: "btn btn-primary" %>
+                         <% end %>
+                 </div>
+             </div>
+         </div>
+
+</div>
+</div>
