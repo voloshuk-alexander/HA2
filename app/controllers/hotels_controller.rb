@@ -1,6 +1,7 @@
 class HotelsController < ApplicationController
   def index
-  end
+    @hotels = Hotel.page(params[:page]).per(3)
+    end
   def create
     @hotels = Hotel.new(hotel_params)
 
@@ -15,7 +16,7 @@ class HotelsController < ApplicationController
 
     private
 
-   def hotel_params
-     params.require(:hotels).permit(:name,:photo, :description,:price,:breakfast,:count_name, :state, :city, :street)
-   end
+ def hotel_params
+    params.require(:hotels).permit(:name,:photo, :description,:price,:breakfast,:count_name, :state, :city, :street)
+  end
 end

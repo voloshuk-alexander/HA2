@@ -14,3 +14,5 @@
 //=require jquery-3.0.0.min
 //=require jquery.easing.1.3
 //=require bootstrap
+//= require jquery.raty
+//= require ratyrate
