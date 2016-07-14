@@ -65,9 +65,9 @@
        <div class="thumbnail">
          <img src="<%= hotels.photo %>"  alt="">
           <div class="caption">
-              <h3><a href="#"> <%= hotels.name %></a></h3>
-              <p><%= hotels.description %></p>
-            <%= link_to "Details", hotel_path(hotels.id) %>
+              <h3><a href="<%=hotel_path(hotels.id)%>"> <%= hotels.name %></a></h3>
+              <div class="desc">  <p><%= hotels.description %></p> </div>
+            <%= link_to "Details", hotel_path(hotels.id), class: "btn btn-primary" %>
            </div>
        </div>
    </div>

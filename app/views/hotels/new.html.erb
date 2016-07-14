@@ -7,33 +7,65 @@
 
 
 
-
-  <div class="container">
-             <div class="row">
-                 <div class="thumbnail aligncenter">
+  <div class="container ">
+             <div class="row ">
+                 <div class="thumbnail aligncenter blue">
                      <h1>New Hotel</h1>
                  </div>
-                 <div class="thumbnail aligncenter">
+                 <div class="thumbnail height" style="padding-top:50px;">
                      <%= simple_form_for :hotels, url: hotels_path do |f| %>
-                     <p><b>Name:</b></p><%= f.input :name, label: false %>
-                     <p><b>Photo:</b></p>
-                     <div class="photo_upload">
-                     <%= f.file_field :photo %>
-                     </div>
-                     <p><b>Price for room:</b></p><%= f.input :price, label: false %>
-                     <p><b>Include breakfast:</b></p>
-                     <%= f.input :breakfast,as: :radio_buttons, label: false %>
-                     <p><b>Adress:</b></p>
-                     <%= f.input :count_name, placeholder: 'Country', label: false %>
-                     <%= f.input :state, placeholder: 'State',label: false %>
-                     <%= f.input :city, placeholder: 'City', label: false %>
-                     <%= f.input :street, placeholder: 'Street', label: false %>
-                     <p><b>Description:</b></p><%= f.input :description,as: :text, label: false %>
-                     <%= f.button :submit, "Add my hotel", class: "btn btn-primary" %>
-                         <% end %>
+
+
+
+                       <div class="tabsLink aligncenter">
+                               <a href="#tab1">Name and photo</a>
+                               <a href="#tab2">Price for room</a>
+                               <a href="#tab3">Adress</a>
+                               <a href="#tab4">Description</a>
+                               </div>
+
+                               <br>
+                               <a class="tabs" id="tab1"></a>
+                               <div class="tab" style="margin-left:30%">
+                                 <p><b>Name:</b></p><%= f.input :name, label: false %>
+                                 <p><b>Photo:</b></p>
+
+                                 <%= f.file_field :photo %>
+
+                               </div>
+
+                               <a class="tabs" id="tab2"></a>
+                               <div class="tab"style="margin-left:35%">
+                                 <p><b>Price for room:</b></p><%= f.input :price, label: false %>
+                                 <p><b>Include breakfast:</b></p>
+                                 <%= f.input :breakfast,as: :radio_buttons, label: false %>
+                               </div>
+
+                               <a class="tabs" id="tab3"></a>
+                               <div class="tab"style="margin-left:35%">
+                                 <%= f.input :count_name, placeholder: 'Country', label: false %>
+                                 <%= f.input :state, placeholder: 'State',label: false %>
+                                 <%= f.input :city, placeholder: 'City', label: false %>
+                                 <%= f.input :street, placeholder: 'Street', label: false %>
+                               </div>
+
+                               <a class="tabs" id="tab4"></a>
+                               <div class="tab"style="margin-left:35%">
+                              <p><b>Description:</b></p><%= f.input :description,as: :text, label: false %>
+                               </div>
+
+
+
+
+
+
+
                  </div>
+
              </div>
          </div>
 
 </div>
+<%= f.button :submit, "Add my hotel", class: "btn btn-primary", style:"margin-left:46%" %>
+    <% end %>
 </div>
