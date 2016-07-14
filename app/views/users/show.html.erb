@@ -6,13 +6,19 @@
         <div class="row masonry2" data-columns>
           <div class="thumbnail">
             <div><p>Name:&nbsp<b><%= @user.name %></b></p></div>
-        <img src="<%= @user.avatar %>"  alt="">
             <div><p>e-Mail:&nbsp<b><%= @user.email %></b></p></div>
+            <img src="<%= @user.avatar %>"  alt="">
           </div>
 
 
              <div class="thumbnail">
                  <div><p>Hotel List</p></div>
+
+
+
+
+
+
                 <%= link_to "Add Hotel", add_path %>
 
              </div>

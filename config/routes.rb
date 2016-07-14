@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-
+  resources :reviews
   resources :users
   match '/signup',  to: 'users#new',            via: 'get'
-
+match '/addreview',  to: 'reviews#new',            via: 'get'
   post '/rate' => 'rater#create', :as => 'rate'
 
   get 'hotels/index'

@@ -1,0 +1,8 @@
+<% provide(:title, 'Add review') %>
+<div class="container">
+<%= simple_form_for :reviews, url: reviews_path do |f| %>
+<p><b>Review:</b></p>
+ <%= f.input :rew,as: :text, label: false %>
+ <%= f.button :submit, "Create", class: "btn btn-large btn-primary" %>
+ <% end %>
+</div>

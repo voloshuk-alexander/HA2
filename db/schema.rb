@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714123054) do
+ActiveRecord::Schema.define(version: 20160714132416) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20160714123054) do
     t.boolean  "breakfast"
     t.text     "description"
     t.integer  "price"
-    t.string   "country"
     t.string   "state"
     t.string   "city"
     t.string   "street"
@@ -35,10 +34,10 @@ ActiveRecord::Schema.define(version: 20160714123054) do
     t.datetime "updated_at",  null: false
     t.string   "photo"
     t.integer  "rating"
+    t.string   "count_name"
   end
 
   add_index "hotels", ["city"], name: "index_hotels_on_city"
-  add_index "hotels", ["country"], name: "index_hotels_on_country"
   add_index "hotels", ["name"], name: "index_hotels_on_name"
   add_index "hotels", ["price"], name: "index_hotels_on_price"
   add_index "hotels", ["state"], name: "index_hotels_on_state"
@@ -75,6 +74,12 @@ ActiveRecord::Schema.define(version: 20160714123054) do
   end
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+
+  create_table "reviews", force: :cascade do |t|
+    t.text     "rew"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
