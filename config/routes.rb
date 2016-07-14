@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :users
+  match '/signup',  to: 'users#new',            via: 'get'
+
   post '/rate' => 'rater#create', :as => 'rate'
+
   get 'hotels/index'
   match '/add',  to: 'hotels#new',            via: 'get'
   root 'hotels#index'

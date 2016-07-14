@@ -25,7 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
+
 gem 'mini_magick'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'carrierwave'

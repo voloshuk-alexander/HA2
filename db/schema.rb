@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712130334) do
+ActiveRecord::Schema.define(version: 20160712191537) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -24,18 +24,24 @@ ActiveRecord::Schema.define(version: 20160712130334) do
 
   create_table "hotels", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.boolean  "breakfast"
     t.text     "description"
     t.integer  "price"
+    t.string   "country"
     t.string   "state"
     t.string   "city"
     t.string   "street"
-    t.string   "count_name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "photo"
     t.integer  "rating"
   end
+
+  add_index "hotels", ["city"], name: "index_hotels_on_city"
+  add_index "hotels", ["country"], name: "index_hotels_on_country"
+  add_index "hotels", ["name"], name: "index_hotels_on_name"
+  add_index "hotels", ["price"], name: "index_hotels_on_price"
+  add_index "hotels", ["state"], name: "index_hotels_on_state"
 
   create_table "overall_averages", force: :cascade do |t|
     t.integer  "rateable_id"
@@ -73,10 +79,10 @@ ActiveRecord::Schema.define(version: 20160712130334) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "password"
+    t.string   "password_confirmation"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
