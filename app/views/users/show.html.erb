@@ -1,3 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="thumbnail aligncenter">
+            <h1>Profile</h1>
+        </div>
+        <div class="row masonry2" data-columns>
+          <div class="thumbnail">
+            <div><p>Name:&nbsp<b><%= @user.name %></b></p></div>
+            <div><p>e-Mail:&nbsp<b><%= @user.email %></b></p></div>
+          </div>
 
-<h1><%= @user.name %></h1>
-<%= @user.name %>, <%= @user.email %>
+
+             <div class="thumbnail">
+                 <div><p>Hotel List</p></div>
+                <%= link_to "Add Hotel", add_path %>
+
+             </div>
+
+        </div>
+    </div>
+</div>
