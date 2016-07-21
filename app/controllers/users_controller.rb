@@ -9,8 +9,10 @@ def create
       @user.save
       redirect_to @user
   end
+def index
+end
 
-  private
+     private
 
     def user_params
       params.require(:user).permit(:name, :avatar, :email, :password,
